@@ -1,0 +1,27 @@
+body {
+  font-family: $font-body;
+  size: 20px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-heading;
+}
+
+h1 {
+  size: 1.9em;
+}
+
+h2 {
+  size: 1.6em;
+}
+
+h3 {
+  size: 1.3em
+}
+
+h4 {
+  size: 1em;
+}

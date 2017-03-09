@@ -4,3 +4,6 @@
 # Composer & Wordpress files
 vendor
 wp-content
+
+# SASS files
+.sass-cache/
