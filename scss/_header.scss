@@ -1,0 +1,39 @@
+header.header {
+  .news-bar {
+    background: $primary;
+    color: $light-text;
+    padding: .5em 0;
+
+    &__wrapper {
+      @extend .wrapper;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__heading,
+    &__article,
+    &__all-news {
+      font-weight: 400;
+      font-size: 1em;
+      font-family: $font-heading;
+      display: inline-block;
+      margin: 0;
+    }
+
+    a {
+      color: $light-text;
+      text-decoration: none;
+
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+  .sticky-header {
+  }
+}
+

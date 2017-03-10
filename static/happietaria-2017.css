@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans");
 body {
   font-family: "Open Sans", sans-serif;
-  size: 20px; }
+  size: 20px;
+  color: #000; }
 
 h1,
 h2,
@@ -20,5 +21,38 @@ h3 {
 
 h4 {
   size: 1em; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+.wrapper, header.header .news-bar__wrapper {
+  max-width: 1164px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+header.header .news-bar {
+  background: #d00;
+  color: #fff;
+  padding: .5em 0; }
+  header.header .news-bar__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  header.header .news-bar__heading, header.header .news-bar__article, header.header .news-bar__all-news {
+    font-weight: 400;
+    font-size: 1em;
+    font-family: "Fjalla One", sans-serif;
+    display: inline-block;
+    margin: 0; }
+  header.header .news-bar a {
+    color: #fff;
+    text-decoration: none; }
+    header.header .news-bar a:hover, header.header .news-bar a:active {
+      text-decoration: underline; }
 
 /*# sourceMappingURL=happietaria-2017.css.map */

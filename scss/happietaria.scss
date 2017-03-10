@@ -1,5 +1,10 @@
+// External
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans');
 
+// Base
 @import "variables";
 @import "typography";
+@import "layout";
+
+// Components
 @import "header";

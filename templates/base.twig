@@ -5,13 +5,21 @@
 	{% endblock %}
 	</head>
 {% endblock %}
-
 	<body class="{{body_class}}" data-template="base.twig">
 		<header class="header" >
 			{% block header %}
-				<div class="wrapper">
-					<h1 class="hdr-logo" role="banner">
-						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
+        <div class="news-bar">
+          <section class="news-bar__wrapper">
+            <span>
+              <h1 class="news-bar__heading">NIEUWS:</h1>
+              <a class="news-bar__article" href="{{ latest_post.link }}">{{ latest_post.title }}</a>
+            </span>
+            <a class="news-bar__all-news" href="/nieuws">ALLE NIEUWS</a>
+          </section>
+        </div>
+				<div class="sticky-header">
+					<h1  role="banner">
+						<a  href="{{site.url}}" rel="home">{{site.name}}</a>
 					</h1>
 					<nav id="nav-main" class="nav-main" role="navigation">
 						{% include "menu.twig" with {'menu': menu.get_items} %}
@@ -20,18 +28,13 @@
 			{% endblock %}
 		</header>
 
-		<section id="content" role="main" class="content-wrapper">
+		<section id="content" role="main">
 			{% if title %}<h1>{{title}}</h1>{% endif %}
-			<div class="wrapper {{sidebar_class}}">
+			<div>
 				{% block content %}
 					Sorry, no content
 				{% endblock %}
 			</div>
-			{% if sidebar %}
-				<aside class="layout-sidebar">
-					{{sidebar}}
-				</aside>
-			{% endif %}
 		</section>
 
 		{% block footer %}

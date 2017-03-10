@@ -10,4 +10,5 @@
  */
 
 $context = Timber::get_context();
+$context['latest_post'] = Timber::get_posts(['posts_per_page' => 1])[0];
 Timber::render( '404.twig', $context );

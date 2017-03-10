@@ -14,8 +14,7 @@
  */
 
 $context = Timber::get_context();
-$context['posts'] = Timber::get_posts();
-$context['foo'] = 'bar';
+$context['latest_post'] = Timber::get_posts(['posts_per_page' => 1])[0];
 $templates = array( 'index.twig' );
 if ( is_home() ) {
 	array_unshift( $templates, 'home.twig' );
