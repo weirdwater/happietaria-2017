@@ -1,0 +1,50 @@
+.sticky-header {
+  font-family: $font-heading;
+  width: 100%;
+  background-color: $white;
+  transition: .5s;
+
+  &__wrapper {
+    @extend .wrapper;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  &__nav {
+    ul {
+      padding: 0;
+      margin: 1.375em 0;
+
+      li {
+        display: inline-block;
+        list-style: none;
+        margin-left: 1em;
+
+        a {
+          color: $dark-text;
+          text-decoration: none;
+
+          &:hover,
+          &:active {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+header[data-fixed="true"] {
+  .news-bar {
+    margin-bottom: 5em;
+  }
+  .sticky-header {
+    position: fixed;
+    top: 0;
+    box-shadow: 0 10px 20px -15px #000;
+  }
+}

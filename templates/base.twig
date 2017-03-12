@@ -6,9 +6,9 @@
 	</head>
 {% endblock %}
 	<body class="{{body_class}}" data-template="base.twig">
-		<header class="header" >
+		<header id="header" class="header" >
 			{% block header %}
-        <div class="news-bar">
+        <div id="newsBar" class="news-bar">
           <section class="news-bar__wrapper">
             <span>
               <h1 class="news-bar__heading">NIEUWS:</h1>
@@ -16,15 +16,21 @@
             </span>
             <a class="news-bar__all-news" href="/nieuws">ALLE NIEUWS</a>
           </section>
-        </div>
-				<div class="sticky-header">
-					<h1  role="banner">
-						<a  href="{{site.url}}" rel="home">{{site.name}}</a>
-					</h1>
-					<nav id="nav-main" class="nav-main" role="navigation">
-						{% include "menu.twig" with {'menu': menu.get_items} %}
-					</nav><!-- #nav -->
-				</div>
+        </div><!-- #newsBar -->
+				<div id="stickyHeader" class="sticky-header">
+          <div class="sticky-header__wrapper">
+              <div class="header-logo">
+                  <a  href="{{site.url}}" rel="home">
+                    <img class="header-logo__image" src="{{ theme.link }}/static/nep-logo.png" alt="{{ site.name }}'s logo">
+                  </a>
+                  <a  href="{{site.url}}" rel="home" class="header-logo__name">{{ site.name | upper }}</a>
+                  <a  href="{{site.url}}" rel="home" class="header-logo__description">{{ site.description }}</a>
+              </div>
+            <nav id="nav-main" class="sticky-header__nav" role="navigation">
+              {% include "menu.twig" with {'menu': menu.get_items} %}
+            </nav><!-- #nav -->
+          </div>
+				</div><!-- #stickyHeader -->
 			{% endblock %}
 		</header>
 

@@ -1,10 +1,12 @@
 <?php
 
-function add_theme_styles_to_queue() {
+function enqueue_scripts_and_styles() {
     wp_enqueue_style( 'happietaria-2017-style', get_template_directory_uri() . '/static/happietaria-2017.css' );
+    wp_enqueue_script('stickyHeader', get_template_directory_uri() . '/static/stickyHeader.js', false, false, true);
+
 }
 
-add_action('wp_enqueue_scripts', 'add_theme_styles_to_queue');
+add_action('wp_enqueue_scripts', 'enqueue_scripts_and_styles');
 
 // Timber Configuration
 

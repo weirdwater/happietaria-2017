@@ -29,30 +29,82 @@ body {
   margin: 0;
   padding: 0; }
 
-.wrapper, header.header .news-bar__wrapper {
+.wrapper, .sticky-header__wrapper, .news-bar__wrapper {
   max-width: 1164px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px; }
 
-header.header .news-bar {
+.sticky-header {
+  font-family: "Fjalla One", sans-serif;
+  width: 100%;
+  background-color: #fff;
+  transition: .5s; }
+  .sticky-header__wrapper {
+    display: flex;
+    justify-content: space-between; }
+  .sticky-header h1 {
+    margin: 0; }
+  .sticky-header__nav ul {
+    padding: 0;
+    margin: 1.375em 0; }
+    .sticky-header__nav ul li {
+      display: inline-block;
+      list-style: none;
+      margin-left: 1em; }
+      .sticky-header__nav ul li a {
+        color: #000;
+        text-decoration: none; }
+        .sticky-header__nav ul li a:hover, .sticky-header__nav ul li a:active {
+          text-decoration: underline; }
+
+header[data-fixed="true"] .news-bar {
+  margin-bottom: 5em; }
+header[data-fixed="true"] .sticky-header {
+  position: fixed;
+  top: 0;
+  box-shadow: 0 10px 20px -15px #000; }
+
+.header-logo {
+  position: relative; }
+  .header-logo__name, .header-logo__description {
+    display: block; }
+  .header-logo a {
+    color: #000;
+    text-decoration: none; }
+  .header-logo__image {
+    height: 3.15em;
+    width: 3.15em;
+    position: absolute;
+    top: .425em; }
+  .header-logo__name {
+    margin-top: .95em;
+    margin-left: 3.5em; }
+  .header-logo__description {
+    font-family: "Open Sans", sans-serif;
+    font-size: .65em;
+    margin-bottom: .9em;
+    margin-left: 5.385em; }
+
+.news-bar {
   background: #d00;
   color: #fff;
-  padding: .5em 0; }
-  header.header .news-bar__wrapper {
+  padding: .5em 0;
+  font-size: .8em; }
+  .news-bar__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-  header.header .news-bar__heading, header.header .news-bar__article, header.header .news-bar__all-news {
+  .news-bar__heading, .news-bar__article, .news-bar__all-news {
     font-weight: 400;
     font-size: 1em;
     font-family: "Fjalla One", sans-serif;
     display: inline-block;
     margin: 0; }
-  header.header .news-bar a {
+  .news-bar a {
     color: #fff;
     text-decoration: none; }
-    header.header .news-bar a:hover, header.header .news-bar a:active {
+    .news-bar a:hover, .news-bar a:active {
       text-decoration: underline; }
 
 /*# sourceMappingURL=happietaria-2017.css.map */

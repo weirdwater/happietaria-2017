@@ -1,0 +1,32 @@
+.header-logo {
+  position: relative;
+
+  &__name,
+  &__description {
+    display: block;
+  }
+
+  a {
+    color: $dark-text;
+    text-decoration: none;
+  }
+
+  &__image {
+    height: 3.15em;
+    width: 3.15em;
+    position: absolute;
+    top: .425em;
+  }
+
+  &__name {
+    margin-top: .95em;
+    margin-left: 3.5em;
+  }
+
+  &__description {
+    font-family: $font-body;
+    font-size: .65em;
+    margin-bottom: .9em;
+    margin-left: 5.385em;
+  }
+}
