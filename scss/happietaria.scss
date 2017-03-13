@@ -1,5 +1,6 @@
 // External
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans');
+@import "neat/neat";
 
 // Base
 @import "variables";
@@ -10,3 +11,6 @@
 @import "sticky-header";
 @import "header-logo";
 @import "news-bar";
+@import "page-header";
+@import "button";
+@import "footer";

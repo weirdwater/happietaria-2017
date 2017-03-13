@@ -1,0 +1,26 @@
+.page-header {
+  min-height: 463px;
+  background-color: $gray;
+  padding: 1.75em 0;
+
+  &-content {
+    @extend .grid-wrapper;
+    background-color: $white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    &__text-area {
+      @include grid-column(7);
+      text-align: center;
+      p {
+        text-align: left;
+      }
+    }
+    &__image {
+      @include grid-column(5);
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -10,6 +10,18 @@ body {
 .wrapper {
   max-width: 1164px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+$neat-grid: (
+  columns: 12,
+  gutter: 30px,
+);
+
+.grid-wrapper {
+  @include grid-container();
+  @include grid-visual;
+  max-width: 1164px;
+  margin: 0 auto;
 }
