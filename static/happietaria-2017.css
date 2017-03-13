@@ -11,7 +11,8 @@ h4 {
   font-family: "Fjalla One", sans-serif; }
 
 h1 {
-  size: 1.9em; }
+  size: 1.9em;
+  text-transform: uppercase; }
 
 h2 {
   size: 1.6em; }

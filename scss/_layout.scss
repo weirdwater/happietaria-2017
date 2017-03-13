@@ -1,3 +1,6 @@
+$max-width: 1164px;
+$gutter-width: 30px;
+
 * {
   box-sizing: border-box;
 }
@@ -8,19 +11,19 @@ body {
 }
 
 .wrapper {
-  max-width: 1164px;
+  max-width: $max-width;
   margin: 0 auto;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: $gutter-width;
+  padding-right: $gutter-width;
 }
 
 $neat-grid: (
   columns: 12,
-  gutter: 30px,
+  gutter: $gutter-width,
 );
 
 .grid-wrapper {
   @include grid-container();
-  max-width: 1164px;
+  max-width: $max-width;
   margin: 0 auto;
 }
