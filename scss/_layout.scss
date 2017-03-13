@@ -21,7 +21,6 @@ $neat-grid: (
 
 .grid-wrapper {
   @include grid-container();
-  @include grid-visual;
   max-width: 1164px;
   margin: 0 auto;
 }

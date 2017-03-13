@@ -11,8 +11,10 @@
 
     &__text-area {
       @include grid-column(7);
+      padding-top: 1em;
       text-align: center;
       p {
+        margin: 2em 0;
         text-align: left;
       }
     }
