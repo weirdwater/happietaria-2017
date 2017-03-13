@@ -1,0 +1,23 @@
+<div id="newsBar" class="news-bar">
+  <section class="news-bar__wrapper">
+            <span>
+              <h1 class="news-bar__heading">NIEUWS:</h1>
+              <a class="news-bar__article" href="{{ latest_post.link }}">{{ latest_post.title }}</a>
+            </span>
+    <a class="news-bar__all-news" href="/nieuws">ALLE NIEUWS</a>
+  </section>
+</div><!-- #newsBar -->
+<div id="stickyHeader" class="sticky-header">
+  <div class="sticky-header__wrapper">
+    <div class="header-logo">
+      <a  href="{{site.url}}" rel="home">
+        <img class="header-logo__image" src="{{ theme.link }}/static/nep-logo.png" alt="{{ site.name }}'s logo">
+      </a>
+      <a  href="{{site.url}}" rel="home" class="header-logo__name">{{ site.name | upper }}</a>
+      <a  href="{{site.url}}" rel="home" class="header-logo__description">{{ site.description }}</a>
+    </div>
+    <nav id="nav-main" class="sticky-header__nav" role="navigation">
+      {% include "menu.twig" with {'menu': menu.get_items} %}
+    </nav><!-- #nav -->
+  </div>
+</div><!-- #stickyHeader -->

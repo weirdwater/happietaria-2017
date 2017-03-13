@@ -1,0 +1,8 @@
+.page-content {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: $white;
+  &__wrapper {
+    @extend .wrapper;
+  }
+}

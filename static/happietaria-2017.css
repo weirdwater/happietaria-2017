@@ -28,9 +28,10 @@ h4 {
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background-color: #f5f5f5; }
 
-.wrapper, .sticky-header__wrapper, .news-bar__wrapper, .footer__wrapper {
+.wrapper, .sticky-header__wrapper, .news-bar__wrapper, .page-content__wrapper, .footer__wrapper {
   max-width: 1164px;
   margin: 0 auto;
   padding-left: 30px;
@@ -117,8 +118,10 @@ header[data-fixed="true"] .sticky-header {
       text-decoration: underline; }
 
 .page-header {
-  min-height: 463px;
+  min-height: 350px;
   background-color: #f5f5f5;
+  background-position: center;
+  background-size: cover;
   padding: 1.75em 0; }
   .page-header-content {
     background-color: #fff;
@@ -139,6 +142,11 @@ header[data-fixed="true"] .sticky-header {
       margin-left: 30px; }
       .page-header-content__image img {
         width: 100%; }
+
+.page-content {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #fff; }
 
 a.button {
   text-decoration: none; }

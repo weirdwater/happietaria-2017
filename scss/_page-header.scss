@@ -1,6 +1,8 @@
 .page-header {
-  min-height: 463px;
+  min-height: 350px;
   background-color: $gray;
+  background-position: center;
+  background-size: cover;
   padding: 1.75em 0;
 
   &-content {
