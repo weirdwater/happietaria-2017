@@ -1,7 +1,9 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	{% for post in posts %}
-		{% include ["tease-"~post.post_type~".twig", "tease.twig"] %}
-	{% endfor %}
+  <section class="page-content__wrapper">
+    {% for post in posts %}
+      {% include ["tease-"~post.post_type~".twig", "tease.twig"] %}
+    {% endfor %}
+  </section>
 {% endblock %}

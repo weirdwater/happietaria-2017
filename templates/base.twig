@@ -16,11 +16,11 @@
 			{% endblock %}
 		</header>
     {% block pageHeader %}
-      <div class="page-header" style="background-image: url('https://static.webshopapp.com/shops/034510/files/035544814/erasmusbrug-bij-nacht.jpg');">
+      <div class="page-header" style="background-image: url('{{ post.thumbnail.src }}');">
       </div>
     {% endblock %}
     <main class="page-content" id="content" role="main">
-    {% block content %}
+      {% block content %}
       <section class="page-content__wrapper" >
         {% if title %}<h1>{{title}}</h1>{% endif %}
         <div>
