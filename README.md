@@ -22,13 +22,13 @@ Happietaria is a for-charity pop-up restaurant organized by students in differen
 
 To start developing spin up a local Wordpress install. Clone this repository to the `wp-content/themes` directory and you're good to go!
 
-For styling we use SCSS. To compile SCSS to CSS you can use [SASS](http://sass-lang.com/)'s commandline tool:
+For styling we use SCSS. To compile SCSS to CSS you can use [SASS](http://sass-lang.com/)'s commandline tool. Just run the following from the theme's directory:
 
 ```
-sass scss/happietaria.scss:static/happietaria-2017.css`
+sass scss/happietaria.scss:static/happietaria-2017.css
 ```
 
-You can also have sass watch the SCSS-directory for changes. As soon as it detects a filechange it will recompile the CSS. To enable watchmode you only need to add the `-w` flag to your command: 
+You can also have sass watch the SCSS-directory for changes. As soon as it detects a filechange it will recompile the CSS. To start the watcher you simply add the `-w` flag to your command: 
 
 ```
 sass -w scss/happietaria.scss:static/happietaria-2017.css
@@ -36,4 +36,4 @@ sass -w scss/happietaria.scss:static/happietaria-2017.css
 
 * * *
 
-Happietaria-2017 is built on top of [timber/starter-theme](https://github.com/timber/starter-theme)
+[happietaria-2017](https://github.com/weirdwater/happietaria-2017) is built on top of [timber/starter-theme](https://github.com/timber/starter-theme)
