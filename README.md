@@ -1,35 +1,39 @@
+# Happietaria Rotterdam 2017
 
-# The Timber Starter Theme
+Happietaria is a for-charity pop-up restaurant organized by students in different cities in the Netherlands. This Wordpress theme was designed and developed for the Rotterdam chapter of Happietaria 2017. See [happietariarotterdam.nl](http://www.happietariarotterdam.nl/) for more information.
 
-The "_s" for Timber: a dead-simple theme that you can build from. The primary purpose of this theme is to provide a file structure rather than a framework for markup or styles. Configure your Sass, scripts, and task runners however you would like!
 
-[![Build Status](https://travis-ci.org/timber/starter-theme.svg)](https://travis-ci.org/timber/starter-theme)
+## Dependencies
 
-## Installing the Theme
+- Wordpress
+- Wordpress plugin: `timber-library`
+- Wordpress plugin: `advanced-custom-fields`
 
-Install this theme as you would any other, and be sure the Timber plugin is activated. But hey, let's break it down into some bullets:
+## Installation
 
-1. Make sure you have installed the plugin for the [Timber Library](https://wordpress.org/plugins/timber-library/) (and Advanced Custom Fields - they [play quite nicely](https://github.com/jarednova/timber/wiki/ACF-Cookbook) together). 
-2. Download the zip for this theme (or clone it) and move it to `wp-content/themes` in your WordPress installation. 
-3. Rename the folder to something that makes sense for your website (generally no spaces and all lowercase). You could keep the name `timber-starter-theme` but the point of a starter theme is to make it your own!
-4. Activate the theme in Appearance >  Themes.
-5. Do your thing! And read [the docs](https://github.com/jarednova/timber/wiki).
+1. Make sure your Wordpress installation has the plugins described under "Dependencies".
+2. Download the latest version from the releases tab on [Github](https://github.com/weirdwater/happietaria-2017/releases).
+2. Go to your Wordpress' Appearance tab in the dashboard.
+3. Click `Add New` and then `Upload Theme`.
+4. Select the downloaded `.zip` and confirm the upload.
+5. Activate the theme.
 
-## What's here?
+### Development
 
-`static/` is where you can keep your static front-end scripts, styles, or images. In other words, your Sass files, JS files, fonts, and SVGs would live here.
+To start developing spin up a local Wordpress install. Clone this repository to the `wp-content/themes` directory and you're good to go!
 
-`templates/` contains all of your Twig templates. These pretty much correspond 1 to 1 with the PHP files that respond to the WordPress template hierarchy. At the end of each PHP template, you'll notice a `Timber::render()` function whose first parameter is the Twig file where that data (or `$context`) will be used. Just an FYI.
+For styling we use SCSS. To compile SCSS to CSS you can use [SASS](http://sass-lang.com/)'s commandline tool:
 
-`bin/` and `tests/` ... basically don't worry about (or remove) these unless you know what they are and want to.
+```
+sass scss/happietaria.scss:static/happietaria-2017.css`
+```
 
-## Other Resources
+You can also have sass watch the SCSS-directory for changes. As soon as it detects a filechange it will recompile the CSS. To enable watchmode you only need to add the `-w` flag to your command: 
 
-The [main Timber Wiki](https://github.com/jarednova/timber/wiki) is super great, so reference those often. Also, check out these articles and projects for more info:
+```
+sass -w scss/happietaria.scss:static/happietaria-2017.css
+```
 
-* [This branch](https://github.com/laras126/timber-starter-theme/tree/tackle-box) of the starter theme has some more example code with ACF and a slightly different set up.
-* [Twig for Timber Cheatsheet](http://notlaura.com/the-twig-for-timber-cheatsheet/)
-* [Timber and Twig Reignited My Love for WordPress](https://css-tricks.com/timber-and-twig-reignited-my-love-for-wordpress/) on CSS-Tricks
-* [A real live Timber theme](https://github.com/laras126/yuling-theme).
-* [Timber Video Tutorials](https://github.com/jarednova/timber/wiki/Video-Tutorials) and [an incomplete set of screencasts](https://www.youtube.com/playlist?list=PLuIlodXmVQ6pkqWyR6mtQ5gQZ6BrnuFx-) for building a Timber theme from scratch.
+* * *
 
+Happietaria-2017 is built on top of [timber/starter-theme](https://github.com/timber/starter-theme)
