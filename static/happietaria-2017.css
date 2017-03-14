@@ -117,6 +117,18 @@ header[data-fixed="true"] .sticky-header {
     .news-bar a:hover, .news-bar a:active {
       text-decoration: underline; }
 
+.pre-header {
+  height: 70vh;
+  height: calc(100vh - 5.9em);
+  position: relative;
+  overflow: hidden; }
+  .pre-header__title {
+    font-size: 7vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(calc(-50% - 59px)); }
+
 .page-header {
   min-height: 350px;
   background-color: #f5f5f5;

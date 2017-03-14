@@ -1,0 +1,14 @@
+.pre-header {
+  height: 70vh;
+  height: calc(100vh - 5.9em);
+  position: relative;
+  overflow: hidden;
+
+  &__title {
+    font-size: 7vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY( calc(-50% - 59px) );
+  }
+}
