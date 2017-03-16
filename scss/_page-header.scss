@@ -1,5 +1,4 @@
 .page-header {
-  min-height: 350px;
   background-color: $gray;
   background-position: center;
   background-size: cover;
@@ -26,5 +25,9 @@
         width: 100%;
       }
     }
+  }
+
+  &--empty {
+    height: 350px;
   }
 }

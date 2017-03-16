@@ -130,7 +130,6 @@ header[data-fixed="true"] .sticky-header {
     transform: translateX(-50%) translateY(calc(-50% - 59px)); }
 
 .page-header {
-  min-height: 350px;
   background-color: #f5f5f5;
   background-position: center;
   background-size: cover;
@@ -154,6 +153,8 @@ header[data-fixed="true"] .sticky-header {
       margin-left: 30px; }
       .page-header-content__image img {
         width: 100%; }
+  .page-header--empty {
+    height: 350px; }
 
 .page-content {
   padding-top: 1em;

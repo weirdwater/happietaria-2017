@@ -13,10 +13,29 @@
         {% include 'header.twig' %}
 			{% endblock %}
 		</header>
+
     {% block pageHeader %}
-      <div class="page-header" style="background-image: url('{{ post.thumbnail.src }}');">
-      </div>
+      {% if post.show_page_header %}
+          {% if post.page_header_show_content %}
+            {% set image = TimberImage(post.get_field('page_header_image')) %}
+            <div class="page-header" style="background-image: url('{{ post.get_thumbnail.src }}');">
+              <div class="page-header-content">
+                <div class="page-header-content__image">
+                  <img src="{{ image.src }}" alt="{{ image.alt }}">
+                </div>
+                <section class="page-header-content__text-area">
+                  <h1>{{ post.page_header_title }}</h1>
+                  <p>{{ post.page_header_body }}</p>
+                  <a class="button" href="{{ post.page_header_cta_url }}">{{ post.page_header_cta }}</a>
+                </section>
+              </div>
+            </div>
+          {% else %}
+            <div class="page-header page-header--empty" style="background-image: url('{{ post.get_thumbnail.src }}');"></div>
+          {% endif %}
+      {% endif %}
     {% endblock %}
+
     <main class="page-content" id="content" role="main">
       {% block content %}
       <section class="page-content__wrapper" >
