@@ -1,0 +1,38 @@
+.content-section {
+
+  &__wrapper {
+    @extend .wrapper;
+    display: flex;
+    align-items: stretch;
+    align-content: stretch;
+  }
+
+  &__image {
+    background-color: #370a04;
+    flex-grow: 1;
+    flex-basis: 0;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__body {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    padding-left: $gutter-width;
+
+    h1 {
+      margin-top: 0;
+    }
+
+    &--left {
+      order: -1;
+      padding-left: 0;
+      padding-right: $gutter-width;
+    }
+  }
+
+
+}
+
