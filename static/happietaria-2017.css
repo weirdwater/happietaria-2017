@@ -195,11 +195,13 @@ header[data-fixed="true"] .sticky-header {
 .content-section__body {
   flex-grow: 1;
   flex-basis: 0;
-  margin-top: 5em;
-  margin-bottom: 5em;
+  margin-top: 6em;
+  margin-bottom: 6em;
   padding-left: 30px; }
   .content-section__body h1 {
     margin-top: 0; }
+  .content-section__body > p {
+    margin-bottom: 4em; }
   .content-section__body--left {
     order: -1;
     padding-left: 0;
