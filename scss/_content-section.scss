@@ -1,4 +1,6 @@
 .content-section {
+  background-position: center;
+  background-size: cover;
 
   &__wrapper {
     @extend .wrapper;
@@ -8,11 +10,11 @@
   }
 
   &__image {
-    background-color: #370a04;
     flex-grow: 1;
     flex-basis: 0;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
   }
 
   &__body {
@@ -35,6 +37,27 @@
       padding-left: 0;
       padding-right: $gutter-width;
     }
+  }
+
+  &--dark {
+    color: $white;
+    background: linear-gradient(10deg, $dark-gradient-start, $dark-gradient-end ), url('http://localhost/wp-content/themes/happietaria-2017/static/wiphala-clear.png');
+
+    .content-section__image {
+      background-size: contain;
+    }
+
+    .button {
+      @extend .button--light;
+    }
+  }
+
+  article {
+    margin-bottom: 4em;
+  }
+
+  article:last-of-type {
+    margin-bottom: 0;
   }
 
 

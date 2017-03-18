@@ -8,8 +8,18 @@ a.button {
   color: $white;
   padding: .6em 2.4em;
   display: inline-block;
+  text-transform: uppercase;
 
   &:hover {
     background-color: $primary-hover;
+  }
+
+  &--light {
+    background-color: $light-button;
+    border: 1px solid $light-button-border;
+
+    &:hover {
+      background-color: $light-button-hover;
+    }
   }
 }

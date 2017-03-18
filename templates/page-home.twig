@@ -10,7 +10,6 @@
   <section class="content-section"> {# Content with side image #}
     <div class="content-section__wrapper">
       <div class="content-section__image" style="background-image: url('http://localhost/wp-content/uploads/2017/03/Looking_up.jpg')">
-        {#<img src="http://localhost/wp-content/uploads/2017/03/Looking_up.jpg" alt="" />#}
       </div>
       <div class="content-section__body">
         <h1>Happietaria</h1>
@@ -23,19 +22,27 @@
       </div>
     </div>
   </section>
-  <section class="content-section"> {# Content with side image #}
+  <section class="content-section content-section--dark" > {# Content with side image #}
     <div class="content-section__wrapper">
-      <div class="content-section__image content-section__image" style="background-image: url('http://localhost/wp-content/uploads/2017/03/Looking_up.jpg')">
-        {#<img src="http://localhost/wp-content/uploads/2017/03/Looking_up.jpg" alt="" />#}
+      <div class="content-section__image content-section__image" style="background-image: url('{{ theme.link }}/static/llamas.png')">
       </div>
       <div class="content-section__body content-section__body--left">
-        <h1>Happietaria</h1>
-        <p>Happietaria Rotterdam is een pop-up restaurant in Rotterdam. Alle opbrengsten gaan naar het goede doel. Dit jaar de Stichting Tear; Minder geweld in Boliviaanse gezinnen Kom dus gezellig een keer langs in ons restaurant voor een uitgebreid diner, of een hapje en een drankje. Voor het goede doel.
-        </p>
-        <h2>Maak kennis met het HMT</h2>
-        <p>Happietaria Rotterdam is een pop-up restaurant in Rotterdam. Alle opbrengsten gaan naar het goede doel. Dit jaar de Stichting Tear; Minder geweld in Boliviaanse gezinnen Kom dus gezellig een keer langs in ons restaurant voor een uitgebreid diner, of een hapje en een drankje. Voor het goede doel.
-        </p>
-        <a href="/about" class="button">Meer over Happietaria</a>
+        <h1>Helpen</h1>
+        <article>
+          <h2>Donaties</h2>
+          <p>Het is ook mogelijk om te doneren zonder te eten. Dit kan via een banktransactie. Dit bedrag kan bijvoorbeeld via de belastingdienst worden afgetrokken van de belasting.</p>
+          <a href="/about" class="button .button--light">Meer over doneren</a>
+        </article>
+        <article>
+          <h2>Vrijwilligers</h2>
+          <p>Ieder jaar hebben wij vrijwilligers nodig om het restaurant draaiende te houden. Ieder jaar hebben wij vrijwilligers nodig om het restaurant draaiende te houden. </p>
+          <a href="/about" class="button .button--light">Word vrijwilliger</a>
+        </article>
+        <article>
+          <h2>Sponsors</h2>
+          <p>Sponsoren zorgen er voor dat Happie draaiend blijft. Zonder hulp van andere bedrijven is het knap lastig iets over te houden voor het doel. Neem contact met ons op voor meer informatie.</p>
+          <a href="/about" class="button .button--light">Contact</a>
+        </article>
       </div>
     </div>
   </section>
