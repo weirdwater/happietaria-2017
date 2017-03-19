@@ -141,6 +141,7 @@ header[data-fixed="true"] .sticky-header {
   position: relative;
   overflow: hidden; }
   .pre-header__title {
+    color: #fff;
     font-size: 7vw;
     position: absolute;
     top: 50%;

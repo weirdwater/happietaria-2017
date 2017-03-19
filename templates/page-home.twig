@@ -3,9 +3,11 @@
 {% extends 'base.twig' %}
 
 {% block preHeader %}
-  <div class="pre-header">
-    <h1 class="pre-header__title">Nog 60 dagen</h1>
-  </div>
+  {% if post.ph_show %}
+    <div class="pre-header" style="background-image: url('{{ TimberImage(post.get_field('ph_img')).src }}');">
+      <h1 class="pre-header__title">Nog <span id="phDaysLeft" data-date="{{ post.get_field('ph_countdown') }}">--</span> dagen</h1>
+    </div>
+  {% endif %}
 {% endblock %}
 
 {% block content %}
@@ -38,5 +40,7 @@
       </div>
     </div>
   </section>
+
+  {{ function('wp_enqueue_script', 'countdown', theme.link ~ '/static/countdown.js', [], false, true) }}
 
 {% endblock %}
