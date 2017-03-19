@@ -9,6 +9,7 @@ a.button {
   padding: .6em 2.4em;
   display: inline-block;
   text-transform: uppercase;
+  transition: .3s;
 
   &:hover {
     background-color: $primary-hover;
