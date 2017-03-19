@@ -13,9 +13,9 @@
 {% block content %}
   <section class="content-section"> {# Content with side image #}
     <div class="content-section__wrapper">
-      <div class="content-section__image" style="background-image: url('{{ TimberImage(post.get_field('happie_img')).src }}')">
+      <div class="content-section__image content-section__image--right" style="background-image: url('{{ TimberImage(post.get_field('happie_img')).src }}')">
       </div>
-      <div class="content-section__body">
+      <div class="content-section__body content-section__body--left">
         <h1>{{ post.happie_title }}</h1>
         {{ post.get_field('happie_body') }}
         <a href="{{ post.get_field('happie_cta_url') }}" class="button">{{ post.happie_cta }}</a>

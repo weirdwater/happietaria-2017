@@ -200,6 +200,12 @@ header[data-fixed="true"] .sticky-header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; }
+    .content-section__image--left {
+      padding-left: 30px;
+      margin-left: -30px; }
+    .content-section__image--right {
+      padding-right: 30px;
+      margin-right: -30px; }
   .content-section__body {
     flex-grow: 1;
     flex-basis: 0;
