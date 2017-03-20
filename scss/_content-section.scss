@@ -19,12 +19,12 @@
 
     &--left {
       padding-left: $gutter-width;
-      margin-left: -$gutter-width; ;
+      margin-left: -$gutter-width;
     }
 
     &--right {
       padding-right: $gutter-width;
-      margin-right: -$gutter-width; ;
+      margin-right: -$gutter-width;
     }
   }
 
@@ -72,5 +72,41 @@
   }
 
 
+
 }
 
+@media screen and (max-width: 680px) {
+  .content-section {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__image,
+    &__image--left,
+    &__image--right {
+      padding: 0;
+      margin: 0;
+    }
+
+    &__image {
+      order: 0;
+      flex-basis: 300px;
+      padding: 0 $gutter-width;
+    }
+
+    &__body {
+      order: 1;
+      margin-top: 2em;
+      padding-left: 0;
+
+      &--left {
+        order: 1;
+        padding: 0;
+      }
+    }
+
+    &--dark {
+      padding-top: 1em;
+    }
+  }
+}
