@@ -8,6 +8,29 @@ function enqueue_scripts_and_styles() {
 
 add_action('wp_enqueue_scripts', 'enqueue_scripts_and_styles');
 
+function footer_widgets_init() {
+
+    register_sidebar([
+        'name'          => 'Footer Center',
+        'id'            => 'footer_center',
+        'before_widget' => '<div>',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2>',
+        'after_title'   => '</h2>'
+    ]);
+
+    register_sidebar([
+        'name'          => 'Footer Right',
+        'id'            => 'footer_right',
+        'before_widget' => '<div>',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2>',
+        'after_title'   => '</h2>'
+    ]);
+}
+
+add_action('widgets_init', 'footer_widgets_init');
+
 // Timber Configuration
 
 if ( ! class_exists( 'Timber' ) ) {

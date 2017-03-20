@@ -15,6 +15,9 @@
 
 $context = Timber::get_context();
 $context['latest_post'] = Timber::get_posts(['posts_per_page' => 1])[0];
+$context['footer_left'] = Timber::get_widgets('footer_left');
+$context['footer_center'] = Timber::get_widgets('footer_center');
+$context['footer_right'] = Timber::get_widgets('footer_right');
 $templates = array( 'index.twig' );
 if ( is_home() ) {
 	array_unshift( $templates, 'home.twig' );

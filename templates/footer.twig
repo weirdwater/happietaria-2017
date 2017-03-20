@@ -1,3 +1,12 @@
 <div class="footer__wrapper">
-Copyright Happietaria Rotterdam {{"now"|date('Y')}}
+  <div class="footer__widgets">
+    <section>
+      {% include 'header-logo.twig' %}
+      <h3>In samenwerking met:</h3>
+      <a href="https://www.tear.nl/projecten/bolivia/minder-geweld-boliviaanse-gezinnen" target="_blank" ><img class="footer__partner-img" src="http://happietariarotterdam.nl/wp-content/uploads/2017/03/tear_logo.png" alt=""></a>
+    </section>
+    <section>{{ footer_center }}</section>
+    <section>{{ footer_right }}</section>
+  </div>
+  <span class="footer__copyright">© Happietaria Rotterdam {{"now"|date('Y')}}</span>
 </div>

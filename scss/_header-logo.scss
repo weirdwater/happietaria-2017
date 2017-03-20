@@ -1,32 +1,36 @@
 .header-logo {
-  position: relative;
+
+  display: flex;
+  align-items: center;
 
   &__name,
   &__description {
     display: block;
   }
 
-  a {
+  &__link {
     color: $dark-text;
     text-decoration: none;
+    display: block;
   }
 
   &__image {
     height: 3.15em;
-    width: 3.15em;
-    position: absolute;
-    top: .425em;
+    margin-right: .3em;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   &__name {
-    margin-top: .95em;
-    margin-left: 3.5em;
+    font-family: $font-heading;
   }
 
   &__description {
     font-family: $font-body;
     font-size: .65em;
-    margin-bottom: .9em;
-    margin-left: 5.385em;
   }
 }

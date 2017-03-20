@@ -20,6 +20,9 @@ $context = Timber::get_context();
 
 $context['title'] = 'Archive';
 $context['latest_post'] = Timber::get_posts(['posts_per_page' => 1])[0];
+$context['footer_center'] = Timber::get_widgets('footer_center');
+$context['footer_right'] = Timber::get_widgets('footer_right');
+
 if ( is_day() ) {
 	$context['title'] = 'Archive: '.get_the_date( 'D M Y' );
 } else if ( is_month() ) {
