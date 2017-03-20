@@ -177,7 +177,10 @@ header[data-fixed="true"] .sticky-header {
     @media screen and (max-width: 650px) {
       .page-header-content {
         flex-direction: column; }
+        .page-header-content__image {
+          flex-grow: 1; }
         .page-header-content__text-area {
+          flex-grow: 1;
           padding-left: 0; } }
   .page-header--empty {
     height: 350px; }

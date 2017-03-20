@@ -32,7 +32,12 @@
     @media screen and (max-width: 650px){
       flex-direction: column;
 
+      &__image {
+        flex-grow: 1;
+      }
+
       &__text-area {
+        flex-grow: 1;
         padding-left: 0;
       }
     }
