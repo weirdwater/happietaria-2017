@@ -1,15 +1,17 @@
 .pre-header {
   height: 70vh;
   height: calc(100vh - 5.9em);
+  background-size: cover;
   position: relative;
   overflow: hidden;
 
   &__title {
     color: $white;
-    font-size: 7vw;
+    font-size: 8vw;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY( calc(-50% - 59px) );
+    text-shadow: 0 0 30px rgba(0,0,0,.6);
   }
 }

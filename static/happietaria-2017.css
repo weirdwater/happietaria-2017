@@ -141,15 +141,17 @@ header[data-fixed="true"] .sticky-header {
 .pre-header {
   height: 70vh;
   height: calc(100vh - 5.9em);
+  background-size: cover;
   position: relative;
   overflow: hidden; }
   .pre-header__title {
     color: #fff;
-    font-size: 7vw;
+    font-size: 8vw;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(calc(-50% - 59px)); }
+    transform: translateX(-50%) translateY(calc(-50% - 59px));
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.6); }
 
 .page-header {
   background-color: #f5f5f5;
@@ -186,6 +188,8 @@ header[data-fixed="true"] .sticky-header {
     height: 350px; }
 
 .page-content {
+  padding-top: 1px;
+  padding-bottom: 1px;
   background-color: #fff;
   font-size: 16px; }
   .page-content h1 {
