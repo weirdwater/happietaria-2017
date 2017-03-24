@@ -128,7 +128,7 @@ header[data-fixed="true"] {
     margin-top: 3em;
     display: block;
     order: 2;
-    min-width: 100%;
+    flex-basis: 100%;
 
     ul {
       flex-direction: column;
@@ -140,9 +140,22 @@ header[data-fixed="true"] {
 
         ul {
           display: block;
-          position: relative;
+          position: static;
           padding-top: .5em;
           padding-bottom: .5em;
+          background-color: $gray;
+          a {
+            color: $dark-text;
+          }
+
+        }
+        &:hover {
+          ul {
+            background-color: $primary;
+            a {
+              color: $light-text;
+            }
+          }
         }
       }
     }
