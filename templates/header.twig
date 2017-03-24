@@ -9,13 +9,7 @@
 </div><!-- #newsBar -->
 <div id="stickyHeader" class="sticky-header">
   <div class="sticky-header__wrapper">
-    <div class="header-logo">
-      <a  href="{{site.url}}" rel="home">
-        <img class="header-logo__image" src="{{ theme.link }}/static/nep-logo.png" alt="{{ site.name }}'s logo">
-      </a>
-      <a  href="{{site.url}}" rel="home" class="header-logo__name">{{ site.name | upper }}</a>
-      <a  href="{{site.url}}" rel="home" class="header-logo__description">{{ site.description }}</a>
-    </div>
+    {% include 'header-logo.twig' %}
     <nav id="nav-main" class="sticky-header__nav" role="navigation">
       {% include "menu.twig" with {'menu': menu.get_items} %}
     </nav><!-- #nav -->

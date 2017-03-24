@@ -1,4 +1,6 @@
 .content-section {
+  background-position: center;
+  background-size: cover;
 
   &__wrapper {
     @extend .wrapper;
@@ -8,22 +10,37 @@
   }
 
   &__image {
-    background-color: #370a04;
     flex-grow: 1;
     flex-basis: 0;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+
+
+    &--left {
+      padding-left: $gutter-width;
+      margin-left: -$gutter-width;
+    }
+
+    &--right {
+      padding-right: $gutter-width;
+      margin-right: -$gutter-width;
+    }
   }
 
   &__body {
     flex-grow: 1;
     flex-basis: 0;
-    margin-top: 5em;
-    margin-bottom: 5em;
+    margin-top: 6em;
+    margin-bottom: 6em;
     padding-left: $gutter-width;
 
     h1 {
       margin-top: 0;
+    }
+
+    > p {
+      margin-bottom: 4em;
     }
 
     &--left {
@@ -33,6 +50,63 @@
     }
   }
 
+  &--dark {
+    color: $white;
+    background: linear-gradient(10deg, $dark-gradient-start, $dark-gradient-end ), url('http://localhost/wp-content/themes/happietaria-2017/static/wiphala-clear.png');
+
+    .content-section__image {
+      background-size: contain;
+    }
+
+    .button {
+      @extend .button--light;
+    }
+  }
+
+  article {
+    margin-bottom: 4em;
+  }
+
+  article:last-of-type {
+    margin-bottom: 0;
+  }
+
+
 
 }
 
+@media screen and (max-width: 680px) {
+  .content-section {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__image,
+    &__image--left,
+    &__image--right {
+      padding: 0;
+      margin: 0;
+    }
+
+    &__image {
+      order: 0;
+      flex-basis: 300px;
+      padding: 0 $gutter-width;
+    }
+
+    &__body {
+      order: 1;
+      margin-top: 2em;
+      padding-left: 0;
+
+      &--left {
+        order: 1;
+        padding: 0;
+      }
+    }
+
+    &--dark {
+      padding-top: 1em;
+    }
+  }
+}

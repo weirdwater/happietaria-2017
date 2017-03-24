@@ -26,7 +26,7 @@
                 <section class="page-header-content__text-area">
                   <h1>{{ post.page_header_title }}</h1>
                   <p>{{ post.page_header_body }}</p>
-                  <a class="button" href="{{ post.page_header_cta_url }}">{{ post.page_header_cta }}</a>
+                  <a class="button" href="{{ post.get_field('page_header_cta_url') }}">{{ post.page_header_cta }}</a>
                 </section>
               </div>
             </div>

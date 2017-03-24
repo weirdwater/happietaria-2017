@@ -14,6 +14,10 @@
     margin: 0;
   }
 
+  .header-logo {
+    margin-top: .425em;
+  }
+
   &__nav {
     ul {
       padding: 0;
@@ -48,3 +52,5 @@ header[data-fixed="true"] {
     box-shadow: 0 10px 20px -15px #000;
   }
 }
+
+// TODO: Make header responsive at 750px

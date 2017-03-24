@@ -5,24 +5,40 @@
   padding: 1.75em 0;
 
   &-content {
-    @extend .grid-wrapper;
+    @extend .wrapper;
     background-color: $white;
     padding-top: 15px;
     padding-bottom: 15px;
+    display: flex;
 
     &__text-area {
-      @include grid-column(7);
-      padding-top: 1em;
+      flex: 7 0 0;
+      padding: 1em $gutter-width;
+      padding-right: 0;
       text-align: center;
       p {
+        font-size: .8em;
         margin: 2em 0;
         text-align: left;
       }
     }
     &__image {
-      @include grid-column(5);
+      flex: 5 0 0;
       img {
-        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 650px){
+      flex-direction: column;
+
+      &__image {
+        flex-grow: 1;
+      }
+
+      &__text-area {
+        flex-grow: 1;
+        padding-left: 0;
       }
     }
   }

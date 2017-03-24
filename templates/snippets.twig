@@ -1,0 +1,7 @@
+{% macro article_cta(title, body, cta, url) %}
+  <article>
+    <h2>{{ title }}</h2>
+    <p>{{ body }}</p>
+    <a href="{{ url }}" class="button .button--light">{{ cta }}</a>
+  </article>
+{% endmacro %}
