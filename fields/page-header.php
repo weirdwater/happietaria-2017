@@ -4,7 +4,7 @@ if(function_exists("register_field_group"))
 {
     register_field_group(array (
         'id' => 'acf_page-header',
-        'title' => 'Page Header',
+        'title' => 'Page Content Header',
         'fields' => array (
             array (
                 'key' => 'field_58c858596fbb4',
@@ -165,6 +165,15 @@ if(function_exists("register_field_group"))
                     'group_no' => 0,
                 ),
             ),
+            array (
+                array (
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'post',
+                    'order_no' => 0,
+                    'group_no' => 0,
+                ),
+            )
         ),
         'options' => array (
             'position' => 'acf_after_title',
