@@ -1,0 +1,34 @@
+.tease-post{
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  border-left: 10px solid $primary;
+  background-color: $gray;
+
+  &__heading,
+  &__thumbnail,
+  &__preview {
+    flex: 1 0 0;
+    padding: 0 20px;
+  }
+
+  &__heading a {
+    color: $dark-text;
+    text-decoration: none;
+  }
+
+  &__thumbnail {
+    min-height: 200px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__preview {
+    margin-top: 0;
+  }
+
+  &__container {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+}

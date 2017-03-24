@@ -263,6 +263,28 @@ header[data-fixed="true"] .sticky-header {
       padding: 0; }
   .content-section--dark {
     padding-top: 1em; } }
+.tease-post {
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  border-left: 10px solid #d00;
+  background-color: #f5f5f5; }
+  .tease-post__heading, .tease-post__thumbnail, .tease-post__preview {
+    flex: 1 0 0;
+    padding: 0 20px; }
+  .tease-post__heading a {
+    color: #000;
+    text-decoration: none; }
+  .tease-post__thumbnail {
+    min-height: 200px;
+    background-size: cover;
+    background-position: center; }
+  .tease-post__preview {
+    margin-top: 0; }
+  .tease-post__container {
+    padding-top: 1em;
+    padding-bottom: 1em; }
+
 .footer {
   font-size: 14px;
   background-color: #f5f5f5; }
