@@ -8,37 +8,80 @@
     @extend .wrapper;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    min-height: 4em;
+  }
+
+  &__nav-link {
+    margin-top: 5px;
+    margin-left: 1em;
+    font-size: 1em;
+    font-family: $font-heading;
+    color: $dark-text;
+    text-transform: uppercase;
+    border-bottom: 5px solid $white;
+    &:hover {
+      border-bottom-color: $primary;
+    }
   }
 
   h1 {
     margin: 0;
   }
 
-  .header-logo {
-    margin-top: .425em;
-  }
-
   &__nav {
     ul {
       padding: 0;
-      margin: 1.375em 0;
+      margin: 0;
+      display: flex;
+      justify-content: flex-end;
 
       li {
-        display: inline-block;
+        @extend .sticky-header__nav-link;
         list-style: none;
-        margin-left: 1em;
+        position: relative;
+
+        &.current-menu-item {
+          border-bottom-color: $primary;
+        }
 
         a {
           color: $dark-text;
           text-decoration: none;
+        }
 
-          &:hover,
-          &:active {
-            text-decoration: underline;
+        &:hover ul {
+          display: block;
+        }
+
+        ul {
+          display: none;
+          margin: 0;
+          padding: 1em 1em 1em 0;
+          position: absolute;
+          top: calc(100% + 5px);
+          background-color: $primary;
+
+          li,
+          li:hover {
+            border: none;
+          }
+          a {
+            color: white;
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
       }
     }
+  }
+
+  &__open-menu {
+    @extend .button--clear;
+    @extend .sticky-header__nav-link;
+    text-decoration: none;
+    cursor: pointer;
   }
 }
 
@@ -53,4 +96,55 @@ header[data-fixed="true"] {
   }
 }
 
-// TODO: Make header responsive at 750px
+@media screen and (max-width: 730px) {
+  .sticky-header__nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 730px) {
+  .sticky-header__open-menu {
+    display: none;
+  }
+}
+
+.sticky-header[data-open="true"] {
+  position: fixed;
+  top: 0;
+  height: 100%;
+
+  .sticky-header__wrapper {
+    flex-wrap: wrap;
+    align-content: space-between;
+    padding-top: .425em;
+  }
+
+  .sticky-header__open-menu {
+    margin-left: auto;
+    display: block;
+  }
+
+  .sticky-header__nav {
+    margin-top: 3em;
+    display: block;
+    order: 2;
+    min-width: 100%;
+
+    ul {
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+
+        ul {
+          display: block;
+          position: relative;
+          padding-top: .5em;
+          padding-bottom: .5em;
+        }
+      }
+    }
+  }
+}
