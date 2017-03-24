@@ -8,33 +8,40 @@
     @extend .wrapper;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    min-height: 4em;
+  }
+
+  &__nav-link {
+    margin-top: 5px;
+    margin-left: 1em;
+    font-size: 1em;
+    font-family: $font-heading;
+    color: $dark-text;
+    text-transform: uppercase;
+    border-bottom: 5px solid $white;
+    &:hover {
+      border-bottom-color: $primary;
+    }
   }
 
   h1 {
     margin: 0;
   }
 
-  .header-logo {
-    margin-top: .425em;
-  }
-
   &__nav {
     ul {
       padding: 0;
-      margin-top: 1.375em;
-      margin-bottom: calc(1.375em - 5px);
-
+      margin: 0;
 
       li {
+        @extend .sticky-header__nav-link;
         display: inline-block;
         list-style: none;
-        margin-left: 1em;
         position: relative;
-        border-bottom: 5px solid $white;
 
-        &:hover,
         &.current-menu-item {
-          border-bottom: 5px solid $primary;
+          border-bottom-color: $primary;
         }
 
         a {
@@ -68,6 +75,13 @@
       }
     }
   }
+
+  &__open-menu {
+    @extend .button--clear;
+    @extend .sticky-header__nav-link;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 
 header[data-fixed="true"] {
@@ -81,4 +95,14 @@ header[data-fixed="true"] {
   }
 }
 
-// TODO: Make header responsive at 750px
+@media screen and (max-width: 730px) {
+  .sticky-header__nav {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 730px) {
+  .sticky-header__open-menu {
+    display: none;
+  }
+}
