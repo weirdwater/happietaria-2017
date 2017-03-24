@@ -6,6 +6,7 @@ a.button {
   background-color: $primary;
   font-family: $font-heading;
   color: $white;
+  border: none;
   padding: .6em 2.4em;
   display: inline-block;
   text-transform: uppercase;
@@ -30,4 +31,8 @@ a.button {
   border: none;
   padding: 0;
   margin: 0;
+}
+
+button {
+  @extend .button;
 }
