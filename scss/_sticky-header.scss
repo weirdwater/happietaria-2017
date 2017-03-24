@@ -21,20 +21,48 @@
   &__nav {
     ul {
       padding: 0;
-      margin: 1.375em 0;
+      margin-top: 1.375em;
+      margin-bottom: calc(1.375em - 5px);
+
 
       li {
         display: inline-block;
         list-style: none;
         margin-left: 1em;
+        position: relative;
+        border-bottom: 5px solid $white;
+
+        &:hover,
+        &.current-menu-item {
+          border-bottom: 5px solid $primary;
+        }
 
         a {
           color: $dark-text;
           text-decoration: none;
+        }
 
-          &:hover,
-          &:active {
-            text-decoration: underline;
+        &:hover ul {
+          display: block;
+        }
+
+        ul {
+          display: none;
+          margin: 0;
+          padding: 1em 1em 1em 0;
+          position: absolute;
+          top: calc(100% + 5px);
+          background-color: $primary;
+
+          li,
+          li:hover {
+            border: none;
+          }
+          a {
+            color: white;
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
       }

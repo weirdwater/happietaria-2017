@@ -77,16 +77,35 @@ a.button {
     margin-top: .425em; }
   .sticky-header__nav ul {
     padding: 0;
-    margin: 1.375em 0; }
+    margin-top: 1.375em;
+    margin-bottom: calc(1.375em - 5px); }
     .sticky-header__nav ul li {
       display: inline-block;
       list-style: none;
-      margin-left: 1em; }
+      margin-left: 1em;
+      position: relative;
+      border-bottom: 5px solid #fff; }
+      .sticky-header__nav ul li:hover, .sticky-header__nav ul li.current-menu-item {
+        border-bottom: 5px solid #d00; }
       .sticky-header__nav ul li a {
         color: #000;
         text-decoration: none; }
-        .sticky-header__nav ul li a:hover, .sticky-header__nav ul li a:active {
-          text-decoration: underline; }
+      .sticky-header__nav ul li:hover ul {
+        display: block; }
+      .sticky-header__nav ul li ul {
+        display: none;
+        margin: 0;
+        padding: 1em 1em 1em 0;
+        position: absolute;
+        top: calc(100% + 5px);
+        background-color: #d00; }
+        .sticky-header__nav ul li ul li,
+        .sticky-header__nav ul li ul li:hover {
+          border: none; }
+        .sticky-header__nav ul li ul a {
+          color: white; }
+          .sticky-header__nav ul li ul a:hover {
+            text-decoration: underline; }
 
 header[data-fixed="true"] .news-bar {
   margin-bottom: 5em; }
