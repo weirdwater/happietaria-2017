@@ -36,7 +36,7 @@
       {% endif %}
     {% endblock %}
 
-    <main class="page-content" id="content" role="main">
+    <main class="page-content {{ post.type }}-content" id="content" role="main">
       {% block content %}
       <section class="page-content__wrapper" >
         {% if title %}<h1>{{title}}</h1>{% endif %}

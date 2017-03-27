@@ -1,0 +1,16 @@
+.post-content {
+  background-color: $gray;
+}
+
+.article-content {
+  background-color: $white;
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+
+  .article-body {
+    flex: 1 0 100%;
+  }
+}

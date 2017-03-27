@@ -157,6 +157,9 @@ header[data-fixed="true"] {
             }
           }
         }
+        &.menu-item-has-children {
+          border: none;
+        }
       }
     }
   }

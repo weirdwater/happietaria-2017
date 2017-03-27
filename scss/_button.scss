@@ -2,6 +2,7 @@ a.button {
   text-decoration: none;
 }
 
+button,
 .button {
   background-color: $primary;
   font-family: $font-heading;
@@ -10,6 +11,7 @@ a.button {
   padding: .6em 2.4em;
   display: inline-block;
   text-transform: uppercase;
+  text-align: center;
   transition: .3s;
 
   &:hover {
@@ -31,8 +33,8 @@ a.button {
   border: none;
   padding: 0;
   margin: 0;
-}
 
-button {
-  @extend .button;
+  &:hover {
+    background: none
+  }
 }

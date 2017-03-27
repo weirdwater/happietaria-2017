@@ -44,10 +44,12 @@ body {
     content: "";
     display: block; }
 
-a.button {
+a.button, .tease-post a.read-more {
   text-decoration: none; }
 
-.button, button {
+button,
+.button,
+.tease-post .read-more {
   background-color: #d00;
   font-family: "Fjalla One", sans-serif;
   color: #fff;
@@ -55,13 +57,24 @@ a.button {
   padding: .6em 2.4em;
   display: inline-block;
   text-transform: uppercase;
+  text-align: center;
   transition: .3s; }
-  .button:hover, button:hover {
+  button:hover,
+  .button:hover,
+  .tease-post .read-more:hover {
     background-color: #f00; }
-  .button--light, .content-section--dark .button, .content-section--dark button {
+  button--light,
+  .button--light,
+  .content-section--dark .button,
+  .content-section--dark .tease-post .read-more,
+  .tease-post .content-section--dark .read-more {
     background-color: rgba(255, 255, 255, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.13); }
-    .button--light:hover, .content-section--dark .button:hover, .content-section--dark button:hover {
+    button--light:hover,
+    .button--light:hover,
+    .content-section--dark .button:hover,
+    .content-section--dark .tease-post .read-more:hover,
+    .tease-post .content-section--dark .read-more:hover {
       background-color: rgba(255, 255, 255, 0.55); }
 
 .button--clear, .sticky-header__open-menu {
@@ -69,6 +82,8 @@ a.button {
   border: none;
   padding: 0;
   margin: 0; }
+  .button--clear:hover, .sticky-header__open-menu:hover {
+    background: none; }
 
 .sticky-header {
   font-family: "Fjalla One", sans-serif;
@@ -172,6 +187,8 @@ header[data-fixed="true"] .sticky-header {
           background-color: #d00; }
           .sticky-header[data-open="true"] .sticky-header__nav ul li:hover ul a {
             color: #fff; }
+        .sticky-header[data-open="true"] .sticky-header__nav ul li.menu-item-has-children {
+          border: none; }
 
 .header-logo {
   display: flex;
@@ -362,6 +379,9 @@ header[data-fixed="true"] .sticky-header {
   .tease-post__container {
     padding-top: 1em;
     padding-bottom: 1em; }
+  .tease-post .read-more {
+    display: block;
+    margin: 1em auto; }
 
 .footer {
   font-size: 14px;
@@ -386,5 +406,18 @@ header[data-fixed="true"] .sticky-header {
     font-size: 20px; }
   .footer__partner-img {
     max-width: 10em; }
+
+.post-content {
+  background-color: #f5f5f5; }
+
+.article-content {
+  background-color: #fff;
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between; }
+  .article-content .article-body {
+    flex: 1 0 100%; }
 
 /*# sourceMappingURL=happietaria-2017.css.map */
