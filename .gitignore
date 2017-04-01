@@ -1,6 +1,9 @@
 # IDE files
 .idea/
 
+# Build files
+dist/
+
 # Composer & Wordpress files
 vendor
 wp-content
