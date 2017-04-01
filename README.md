@@ -18,6 +18,13 @@ Happietaria is a for-charity pop-up restaurant organized by students in differen
 4. Select the downloaded `.zip` and confirm the upload.
 5. Activate the theme.
 
+### Changelog
+
+#### v1.0.1
+
+- Bugfix: Settings for the home page template would only show up on the page with the id 27. Fixed it so it would show up for the static home page.
+- Bugfix: Google font wasn't getting loaded.
+
 ### Development
 
 To start developing spin up a local Wordpress install. Clone this repository to the `wp-content/themes` directory and you're good to go!
