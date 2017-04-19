@@ -4,6 +4,7 @@ require 'fields/fields.php';
 
 function enqueue_scripts_and_styles() {
     wp_enqueue_style( 'happietaria-2017-style', get_template_directory_uri() . '/static/happietaria-2017.css' );
+    wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:400,600' );
     wp_enqueue_script('stickyHeader', get_template_directory_uri() . '/static/stickyHeader.js', false, false, true);
 
 }
