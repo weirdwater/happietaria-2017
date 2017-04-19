@@ -421,4 +421,17 @@ header[data-fixed="true"] .sticky-header {
   .article-content .article-body {
     flex: 1 0 100%; }
 
+.bio__text-box {
+  width: 60%; }
+.bio-minions__list {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .bio-minions__list li {
+    flex: 1 0 auto;
+    display: block;
+    margin: 0 1em;
+    text-align: center; }
+
 /*# sourceMappingURL=happietaria-2017.css.map */
