@@ -36,6 +36,10 @@ sass -w scss/happietaria.scss:static/happietaria-2017.css
 
 ## Changelog
 
+### v1.1.0
+
+- Add embedded react app to register volunteers.
+
 ### v1.0.2
 
 - Add a script that assembles a distributable wordpress theme.
