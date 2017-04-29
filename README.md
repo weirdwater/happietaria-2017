@@ -36,6 +36,11 @@ sass -w scss/happietaria.scss:static/happietaria-2017.css
 
 ## Changelog
 
+### v1.1.5
+
+- Update favicon
+- Update signup app to allow for continuation
+
 ### v1.1.0
 
 - Add embedded react app to register volunteers.
