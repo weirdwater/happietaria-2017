@@ -36,6 +36,10 @@ sass -w scss/happietaria.scss:static/happietaria-2017.css
 
 ## Changelog
 
+### v1.1.6
+
+- Update shift times in signup app
+
 ### v1.1.5
 
 - Update favicon
